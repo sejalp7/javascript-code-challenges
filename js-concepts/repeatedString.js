@@ -1,29 +1,25 @@
-// function repeatedString(string, length) {
-//     let str = string.repeat(length, string);
-//     // console.log('Repeated string', str);
-//     const searchText = 'a';
-//     let counter = 0;
-//     console.log(str);
-//     for(let i=0; i <= str.length - 1; i++) {
-//         if(str[i] === searchText) {
-//             counter++;
-//         }
-//     }
-//     console.log('Count', counter);
-//     return counter;
-// }
+// Complete the repeatedString function in the editor below. It should return an integer representing the number of occurrences of a in the prefix of length  in the infinitely repeating string.
+
+// repeatedString has the following parameter(s):
+
+// s: a string to repeat
+// n: the number of characters to consider
+
 function repeatedString(string, num) {
-    let final = '';
-    let counter = 0;
-    for(i=0; i<num; i++) {
-        final += string;
-        // console.log('string', final);
-    }
-    for(let i=0; i <= final.length - 1; i++) {
-                if(str[i] === searchText) {
-                    counter++;
-        }
-    }
-    console.log('Count', counter);
+  if(string === undefined || string === '') {
+    return 0;
+  }
+  let rem = 0; remCount = 0, repeatCount = 0, count = 0;
+  rem = num % string.length;
+  repeatCount = num / string.length;
+  for (let index = 0; index < string.length; index++) {
+      if(string[index] === 'a') {
+        count++;
+      }
+      if(string[index] === 'a' && index < rem) {
+        remCount++;
+      }
+  }
+  return Math.floor((count * repeatCount) + remCount);
 }
-repeatedString('ab', 1000000);
+console.log("repeatedString('ab', 100)", repeatedString('abc', 10));

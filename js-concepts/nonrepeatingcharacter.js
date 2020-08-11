@@ -1,4 +1,4 @@
-const inStr = 'aaabcccdeeef';
+const inStr = 'abcabcbb';
 
 function firstNonRepeatingCharacter(inputString) {
     let counter ={};
@@ -18,6 +18,7 @@ function firstNonRepeatingCharacter(inputString) {
             break;
         }
     }
+    console.log('count', counter[el], nonRepeatingChar);
     return nonRepeatingChar;
 }
 

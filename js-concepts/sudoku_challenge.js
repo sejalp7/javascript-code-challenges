@@ -34,6 +34,8 @@ function get_square(board, square) {
   return cells
 }
 
+
+
 function appear_only_once(r, c) {
   board_updated = false;
   for (let p = 1; p < 10; p++) 
@@ -53,6 +55,8 @@ function appear_only_once(r, c) {
   }
   console.log("Board", sudoku);
 }
+
+
 
 function appear_only_once1(segment, r, c) {
     board_updated = false;

@@ -1,17 +1,18 @@
 // Complete the jumpingOnClouds function below.
 function jumpingOnClouds(c) {
- let clouds = c.split('');
  let counter = 0;
- for(let i=0; i <= clouds.length; i++) {
-     for(let j=i+1; j<= clouds.length; j--) {
-         if(clouds[0] === clouds[j]){
-             j--;
-             counter++;
-             console.log('counter', counter);
-         }
+ let len = c.length;
+ let i = 0;
+ while(i < len - 1) {
+     if(i + 2 >= len || c[len + 2] === 1) {
+         i = i + 1;
+         counter = counter + 1;
+     } else {
+         i = i + 2;
+         counter = counter + 1;
      }
  }
-
+ return counter;
 }
-let c = '0 0 1 0 0 1 0';
-jumpingOnClouds(c);
+let c = [0, 0, 0, 1, 0, 0];
+console.log("jumpingOnClouds", jumpingOnClouds(c));

@@ -1,0 +1,203 @@
+<style>
+  body {
+    background-color: #f6f6f6;
+    color: #4a70c9;
+  }
+
+  .shape {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .shapes {
+    flex: 1;
+  }
+  #square {
+    width: 200px;
+    height: 200px;
+    border: 5px greenyellow solid;
+  }
+
+  #circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px orange solid;
+  }
+
+  #rectangle {
+    width: 300px;
+    height: 100px;
+    border: 5px palevioletred solid;
+  }
+
+  #triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid #e85d75;
+  }
+
+  #oval {
+    width: 60px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px purple solid;
+  }
+
+  #pentagon {
+    position: relative;
+    width: 60px;
+    border-width: 50px 20px 0;
+    border-style: solid;
+    border-color: #cf53ab transparent;
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  #pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -90px;
+    left: -20px;
+    border-width: 0 50px 40px;
+    border-style: solid;
+    border-color: transparent transparent #cf53ab;
+  }
+
+  #hexagon {
+    width: 80px;
+    height: 45px;
+    background: #90e7e9;
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 25px;
+  }
+  #hexagon:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 25px solid #90e7e9;
+  }
+  #hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 25px solid #90e7e9;
+  }
+
+  #octagon {
+    width: 90px;
+    height: 90px;
+    background: #d73744;
+    -webkit-clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    );
+    
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      100% 30%,
+      100% 70%,
+      70% 100%,
+      30% 100%,
+      0% 70%,
+      0% 30%
+    );
+    margin-top: 20px;
+  }
+
+  #star {
+    width: 100px;
+    height: 100px;
+    background: #a3ff9d;
+    -webkit-clip-path: polygon(
+      50% 0%,
+      63% 38%,
+      100% 38%,
+      69% 59%,
+      82% 100%,
+      50% 75%,
+      18% 100%,
+      31% 59%,
+      0% 38%,
+      37% 38%
+    );
+    clip-path: polygon(
+      50% 0%,
+      63% 38%,
+      100% 38%,
+      69% 59%,
+      82% 100%,
+      50% 75%,
+      18% 100%,
+      31% 59%,
+      0% 38%,
+      37% 38%
+    );
+  }
+</style>
+<div
+  style="display: flex; text-align: center; padding: 10px; flex-flow: row wrap;"
+>
+  <div class="shapes">
+    <h4>Square</h4>
+    <div id="square" class="shape"></div>
+  </div>
+  <div class="shapes">
+    <h4>Circle</h4>
+    <div id="circle" class="shape"></div>
+  </div>
+  <div class="shapes">
+    <h4>Rectangle</h4>
+    <div id="rectangle" class="shape"></div>
+  </div>
+  <div class="shapes">
+    <h4>Triangle</h4>
+    <div id="triangle" class="shape"></div>
+  </div>
+
+  <div class="shapes">
+    <h4>Star</h4>
+    <div id="star" class="shape"></div>
+  </div>
+
+  <div class="shapes">
+    <h4>Oval</h4>
+    <div id="oval" class="shape"></div>
+  </div>
+
+  <div class="shapes">
+    <h4>Pentagon</h4>
+    <div id="pentagon" class="shape"></div>
+  </div>
+
+  <div class="shapes">
+    <h4>Hexagon</h4>
+    <div id="hexagon" class="shape"></div>
+  </div>
+
+  <div class="shapes">
+    <h4>Octagon</h4>
+    <div id="octagon" class="shape"></div>
+  </div>
+</div>
